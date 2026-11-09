@@ -42,6 +42,12 @@
     .app{min-height:calc(100vh - 64px); border-radius:28px; overflow:hidden;}
   }
 
+  /* top pill tabs (Wear/Pair/Care) */
+  .toptabs{position:sticky; top:0; z-index:30; background:#fff; display:flex; gap:9px; padding:11px 15px;}
+  .toptabs button{flex:1; height:42px; border-radius:21px; border:none; font-family:inherit; font-weight:600; font-size:15px; cursor:pointer;}
+  .toptabs button.inactive{background:#f6f3f2; color:#0b172b;}
+  .toptabs button.active{background:#8f0926; color:#fff;}
+
   /* header */
   .topbar{
     position:sticky; top:0; z-index:30;
@@ -276,10 +282,10 @@
 
   <!-- ============ WEAR ============ -->
   <section class="panel" id="panel-wear">
-    <div class="topbar">
-      <button class="back" data-go="home">‹</button>
-      <span class="title">Wear</span>
-      <span class="menu">☰</span>
+    <div class="toptabs">
+      <button class="active" data-go="wear">Wear</button>
+      <button class="inactive" data-go="pair">Pair</button>
+      <button class="inactive" data-go="care">Care</button>
     </div>
 
     <div class="photo-hero">
@@ -355,10 +361,10 @@
 
   <!-- ============ PAIR ============ -->
   <section class="panel" id="panel-pair">
-    <div class="topbar">
-      <button class="back" data-go="home">‹</button>
-      <span class="title">Pair</span>
-      <span class="menu">☰</span>
+    <div class="toptabs">
+      <button class="inactive" data-go="wear">Wear</button>
+      <button class="active" data-go="pair">Pair</button>
+      <button class="inactive" data-go="care">Care</button>
     </div>
 
     <div class="pair-hero">
@@ -530,10 +536,10 @@
 
   <!-- ============ CARE ============ -->
   <section class="panel" id="panel-care">
-    <div class="topbar">
-      <button class="back" data-go="home">‹</button>
-      <span class="title">Care</span>
-      <span class="menu">☰</span>
+    <div class="toptabs">
+      <button class="inactive" data-go="wear">Wear</button>
+      <button class="inactive" data-go="pair">Pair</button>
+      <button class="active" data-go="care">Care</button>
     </div>
 
     <div class="photo-hero">
