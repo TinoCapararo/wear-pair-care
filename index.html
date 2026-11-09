@@ -176,6 +176,17 @@
   .garment-card{flex:1; background:#fff; border-radius:12px; padding:8px 8px 12px; text-align:center;}
   .garment-card img{width:100%; aspect-ratio:101/187; object-fit:cover; border-radius:8px; display:block; margin-bottom:10px;}
   .garment-card .name{font-size:13px; font-weight:600; color:var(--navy);}
+
+  /* garment carousel (above-wing, 10 garments, swipeable) */
+  .carousel-track{display:flex; gap:12px; overflow-x:auto; padding:0 22px 8px; margin-bottom:4px; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch;}
+  .carousel-track::-webkit-scrollbar{display:none;}
+  .carousel-card{flex:0 0 108px; background:#fff; border-radius:12px; padding:8px 8px 10px; text-align:center; scroll-snap-align:start;}
+  .carousel-card .img-wrap{width:100%; height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:8px;}
+  .carousel-card img{max-width:100%; max-height:100%; object-fit:contain; display:block;}
+  .carousel-card .name{font-size:11.5px; font-weight:600; color:var(--navy); line-height:1.25;}
+  .carousel-card.placeholder .img-wrap{background:var(--cream); border-radius:8px;}
+  .carousel-card.placeholder .ph-icon{font-size:20px; color:#c9bcbc; letter-spacing:2px;}
+  .carousel-hint{font-size:11.5px; color:var(--muted); padding:0 24px; margin:0 0 16px; opacity:.75;}
   .below-wing-note{
     display:none; padding:0 22px 16px; font-size:13px; color:var(--muted); line-height:1.5;
   }
@@ -189,6 +200,50 @@
     background:#fff; padding:22px 24px 90px; margin-top:10px;
     font-size:11px; font-weight:600; color:var(--navy); opacity:.65; letter-spacing:.5px;
   }
+
+  /* explore the guide (media) */
+  .guide-section{padding:30px 24px 10px;}
+  .guide-section .eyebrow-row{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .media-block{margin-bottom:28px;}
+  .media-block .mb-title{font-size:15px;font-weight:600;color:var(--navy);margin:0 0 12px;}
+  .media-block img{width:100%;border-radius:16px;display:block;margin-bottom:12px;}
+  .media-block .mb-caption{font-size:13px;line-height:1.55;color:var(--navy);opacity:.8;margin:0;}
+
+  /* pairing tutorials */
+  .tutorials-section{padding:34px 24px 10px;}
+  .tutorials-section .eyebrow-row{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+  .tutorials-section h2{font-size:26px;font-weight:400;font-family:'Inter',serif;margin:0 0 8px;color:var(--navy);}
+  .tutorials-section .source-note{font-size:12.5px;color:var(--muted);margin:0 0 30px;font-style:italic;}
+
+  .tutorial-block{margin-bottom:36px;}
+  .tutorial-block .t-eyebrow{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--burgundy);margin:0 0 6px;}
+  .tutorial-block h3{font-size:21px;font-weight:600;margin:0 0 8px;color:var(--navy);}
+  .tutorial-block .t-sub{font-size:13px;color:var(--muted);margin:0 0 16px;}
+  .tutorial-block .t-rule{height:2px;background:var(--border);margin:0 0 20px;}
+
+  .windsor-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px;}
+  .windsor-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:16px;padding:14px 12px 12px;text-align:center;}
+  .windsor-card .wnum{position:absolute;top:10px;left:10px;width:26px;height:26px;border-radius:50%;background:var(--burgundy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .windsor-card img{width:100%;border-radius:10px;display:block;margin-top:10px;aspect-ratio:156/153;object-fit:cover;}
+
+  .finished-panel{background:var(--navy);border-radius:18px;padding:22px 18px;display:flex;gap:16px;align-items:flex-start;margin-bottom:10px;color:#fff;}
+  .finished-panel img{width:104px;border-radius:12px;flex:none;aspect-ratio:112/137;object-fit:cover;}
+  .finished-panel .fp-text{flex:1;}
+  .finished-panel .fp-eyebrow{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#cdd6e4;margin:0 0 4px;}
+  .finished-panel .fp-title{font-size:18px;font-weight:600;margin:0 0 10px;}
+  .finished-panel p{font-size:12.5px;line-height:1.5;color:#d8dde6;margin:0;}
+
+  .belt-card{display:flex;gap:14px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:14px;margin-bottom:12px;align-items:center;}
+  .belt-card .bnum{flex:none;width:30px;height:27px;border-radius:8px;background:var(--cream-card);color:var(--burgundy);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .belt-card img{flex:none;width:92px;border-radius:10px;aspect-ratio:140/102;object-fit:cover;}
+  .belt-card .bc-text{flex:1;}
+  .belt-card .bc-text h4{font-size:13.5px;font-weight:600;margin:0 0 4px;color:var(--navy);}
+  .belt-card .bc-text p{font-size:12px;line-height:1.45;color:var(--navy);opacity:.8;margin:0;}
+
+  .final-check{display:flex;gap:12px;background:var(--cream-card);border-radius:14px;padding:16px;margin-top:6px;}
+  .final-check .fc-accent{width:4px;background:var(--burgundy);border-radius:2px;flex:none;}
+  .final-check h4{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--burgundy);margin:0 0 6px;}
+  .final-check p{font-size:13px;color:var(--navy);margin:0;}
 </style>
 </head>
 <body>
@@ -283,6 +338,18 @@
       </div>
     </div>
 
+    <div class="guide-section">
+      <div class="eyebrow-row">
+        <div class="underline-accent"></div>
+        <p class="eyebrow">Explore the guide</p>
+      </div>
+      <div class="media-block">
+        <p class="mb-title">See the people behind the uniform</p>
+        <img src="assets/wear-team.png" alt="Group of Delta flight crew and ground team members in navy and burgundy uniforms, standing together.">
+        <p class="mb-caption">Consistent styling supports a professional, recognizable Delta team.</p>
+      </div>
+    </div>
+
     <div class="footer-bar">DISTINCTLY DELTA&nbsp;&nbsp;/&nbsp;&nbsp;WEAR • PAIR • CARE</div>
   </section>
 
@@ -308,11 +375,19 @@
     </div>
 
     <div id="above-wing">
-      <div class="garment-row">
-        <div class="garment-card"><img src="assets/pair-blouse.png" alt="Navy Delta blouse with striped tie, above-wing uniform piece"><div class="name">Blouse</div></div>
-        <div class="garment-card"><img src="assets/pair-dress.png" alt="Burgundy Delta wrap dress, above-wing uniform piece"><div class="name">Dress</div></div>
-        <div class="garment-card"><img src="assets/pair-overall.png" alt="Black Delta overalls, below-wing uniform piece"><div class="name">Overall</div></div>
+      <div class="carousel-track">
+        <div class="carousel-card"><div class="img-wrap"><img src="assets/carousel-01-overalls.png" alt="Black Delta utility overalls"></div><div class="name">Utility overalls</div></div>
+        <div class="carousel-card"><div class="img-wrap"><img src="assets/carousel-02-wrapdress.png" alt="Burgundy Delta wrap dress"></div><div class="name">Wrap dress</div></div>
+        <div class="carousel-card"><div class="img-wrap"><img src="assets/carousel-03-navypolo.png" alt="Navy Delta polo with red trim"></div><div class="name">Navy polo</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Utility shirt</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Blouse &amp; scarf</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Cargo shorts</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Zip cardigan</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Tailored blazer</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Sheath dress</div></div>
+        <div class="carousel-card placeholder"><div class="img-wrap"><span class="ph-icon">⋯</span></div><div class="name">Trousers</div></div>
       </div>
+      <p class="carousel-hint">Swipe to see all 10 garments →</p>
     </div>
     <p class="below-wing-note" id="below-wing-note">Below-Wing garment photos are still being finalized for this guide — in the meantime, follow the written styling notes below for ANSI vests, outerwear and overalls pairings.</p>
 
@@ -362,6 +437,91 @@
         <div class="accent"></div><div class="step">07</div>
         <h3>Full pairing requirements</h3>
         <p>The handbook directs team members to the "How to Pair" resource on the Distinctly Delta Wear Test Hub for the comprehensive garment pairing guide.</p>
+      </div>
+    </div>
+
+    <div class="tutorials-section">
+      <div class="eyebrow-row">
+        <div class="underline-accent"></div>
+        <p class="eyebrow">Pairing tutorials</p>
+      </div>
+      <h2>A closer look, step by step</h2>
+      <p class="source-note">Original Delta handbook illustrations</p>
+
+      <div class="tutorial-block">
+        <p class="t-eyebrow">01 / How to tie a tie</p>
+        <h3>The Windsor knot</h3>
+        <p class="t-sub">11 illustrated steps · Follow in order</p>
+        <div class="t-rule"></div>
+
+        <div class="windsor-grid">
+          <div class="windsor-card"><div class="wnum">01</div><img src="assets/windsor-01.png" alt="Windsor knot step 1"></div>
+          <div class="windsor-card"><div class="wnum">02</div><img src="assets/windsor-02.png" alt="Windsor knot step 2"></div>
+          <div class="windsor-card"><div class="wnum">03</div><img src="assets/windsor-03.png" alt="Windsor knot step 3"></div>
+          <div class="windsor-card"><div class="wnum">04</div><img src="assets/windsor-04.png" alt="Windsor knot step 4"></div>
+          <div class="windsor-card"><div class="wnum">05</div><img src="assets/windsor-05.png" alt="Windsor knot step 5"></div>
+          <div class="windsor-card"><div class="wnum">06</div><img src="assets/windsor-06.png" alt="Windsor knot step 6"></div>
+          <div class="windsor-card"><div class="wnum">07</div><img src="assets/windsor-07.png" alt="Windsor knot step 7"></div>
+          <div class="windsor-card"><div class="wnum">08</div><img src="assets/windsor-08.png" alt="Windsor knot step 8"></div>
+          <div class="windsor-card"><div class="wnum">09</div><img src="assets/windsor-09.png" alt="Windsor knot step 9"></div>
+          <div class="windsor-card"><div class="wnum">10</div><img src="assets/windsor-10.png" alt="Windsor knot step 10"></div>
+          <div class="windsor-card"><div class="wnum">11</div><img src="assets/windsor-11.png" alt="Windsor knot step 11"></div>
+        </div>
+
+        <div class="finished-panel">
+          <img src="assets/windsor-finished.png" alt="Completed Windsor knot tied on a Delta uniform shirt.">
+          <div class="fp-text">
+            <p class="fp-eyebrow">The finished look</p>
+            <p class="fp-title">Full Windsor</p>
+            <p>A polished, balanced finish. Windsor, Double Windsor and Full Windsor refer to the same knot.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tutorial-block">
+        <p class="t-eyebrow">02 / Dress belt tutorial</p>
+        <h3>How to tie a dress belt</h3>
+        <p class="t-sub">Follow the six steps in order.</p>
+        <div class="t-rule"></div>
+
+        <div class="belt-card">
+          <div class="bnum">01</div>
+          <img src="assets/belt-01.png" alt="Dress belt step 1">
+          <div class="bc-text"><h4>Wrap &amp; position</h4><p>Wrap the belt around your waist and shift it to the left. Keep the left tail longer.</p></div>
+        </div>
+        <div class="belt-card">
+          <div class="bnum">02</div>
+          <img src="assets/belt-02.png" alt="Dress belt step 2">
+          <div class="bc-text"><h4>Cross &amp; knot</h4><p>Cross both tails and tie them into a knot.</p></div>
+        </div>
+        <div class="belt-card">
+          <div class="bnum">03</div>
+          <img src="assets/belt-03.png" alt="Dress belt step 3">
+          <div class="bc-text"><h4>Make a loop</h4><p>Make a loop with the longer left tail around the right end.</p></div>
+        </div>
+        <div class="belt-card">
+          <div class="bnum">04</div>
+          <img src="assets/belt-04.png" alt="Dress belt step 4">
+          <div class="bc-text"><h4>Pull through</h4><p>Pull the single loop through the knot.</p></div>
+        </div>
+        <div class="belt-card">
+          <div class="bnum">05</div>
+          <img src="assets/belt-05.png" alt="Dress belt step 5">
+          <div class="bc-text"><h4>Even the ends</h4><p>Lift the loop and adjust until both belt ends are even.</p></div>
+        </div>
+        <div class="belt-card">
+          <div class="bnum">06</div>
+          <img src="assets/belt-06.png" alt="Dress belt step 6">
+          <div class="bc-text"><h4>Final position</h4><p>The single-loop bow should sit on the left side of your body.</p></div>
+        </div>
+
+        <div class="final-check">
+          <div class="fc-accent"></div>
+          <div>
+            <h4>Final styling check</h4>
+            <p>Single-loop bow on the left side.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -444,6 +604,23 @@
         <div class="accent"></div><div class="step">07</div>
         <h3 class="alert">Important cost &amp; damage policy</h3>
         <p>Delta will not reimburse dry-cleaning costs. If damage or issues result from not following care instructions, additional garments will not be provided.</p>
+      </div>
+    </div>
+
+    <div class="guide-section">
+      <div class="eyebrow-row">
+        <div class="underline-accent"></div>
+        <p class="eyebrow">Explore the guide</p>
+      </div>
+      <div class="media-block">
+        <p class="mb-title">Care starts with the label</p>
+        <img src="assets/care-symbols.png" alt="Guide to care symbols chart: machine wash, do not wash, bleach, do not bleach, tumble dry settings, dry flat, iron temperatures and dry clean.">
+        <p class="mb-caption">Follow each garment's care instructions before washing or dry cleaning.</p>
+      </div>
+      <div class="media-block">
+        <p class="mb-title">Care symbols at a glance</p>
+        <img src="assets/care-washing.png" alt="Hands placing folded white garments into a front-loading washing machine.">
+        <p class="mb-caption">Use the original Delta handbook symbols to check washing, drying, ironing and dry-cleaning instructions.</p>
       </div>
     </div>
 
